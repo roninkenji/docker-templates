@@ -12,7 +12,8 @@ Transmission is a BitTorrent client which features a simple interface on top of 
  * /srv/watchdir : in this path Transmission will wach for new torrents to download.[br/][br/]
 [b]Network Ports:[/b][br/]
  * 9091 : Transmission rpc interface.[br/]
- * 51413 : Default BitTorrent communications port the Transmission uses.[br/]
+ * 64005 : Default BitTorrent communications port the Transmission uses.[br/]
+ * 64000-64010 : Port range for Transmission to use.[br/]
 </Description>
 <Registry>https://registry.hub.docker.com/u/roninkenji/transmission-docker/</Registry>
 <GitHub>https://github.com/roninkenji/transmission-docker</GitHub>
@@ -38,8 +39,58 @@ Transmission is a BitTorrent client which features a simple interface on top of 
 <Protocol>tcp</Protocol>
 </Port>
 <Port>
-<HostPort>51413</HostPort>
-<ContainerPort>51413</ContainerPort>
+<HostPort>64005</HostPort>
+<ContainerPort>64005</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64000</HostPort>
+<ContainerPort>64000</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64001</HostPort>
+<ContainerPort>64001</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64002</HostPort>
+<ContainerPort>64002</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64003</HostPort>
+<ContainerPort>64003</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64004</HostPort>
+<ContainerPort>64004</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64006</HostPort>
+<ContainerPort>64006</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64007</HostPort>
+<ContainerPort>64007</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64008</HostPort>
+<ContainerPort>64008</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64009</HostPort>
+<ContainerPort>64009</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64010</HostPort>
+<ContainerPort>64010</ContainerPort>
 <Protocol>tcp</Protocol>
 </Port>
 </Publish>
