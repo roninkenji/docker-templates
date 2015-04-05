@@ -2,23 +2,17 @@
 <Container>
 <Name>Transmission</Name>
 <Description>
-[b]Transmission bittorrent client under Slackware userspace[/b]
-
-[Transmission project page](www.transmissionbt.com)
-
-Transmission is a BitTorrent client which features a simple interface on top of a cross-platform back-end. Transmission is free software licensed under the terms of the GNU General Public License (GPL), with parts under the MIT License.
-
-[b]Directions:[/b]
-
-[b]Data Volumes:[/b]
- * /srv/config : in this path Transmission will store it's configuration files.
- * /srv/downloads : in this path Transmission will store the downloaded files.
- * /srv/watchdir : in this path Transmission will wach for new torrents to download.
-
-[b]Network Ports:[/b]
- * 9091 : Transmission rpc interface.
- * 51413 : Default BitTorrent communications port the Transmission uses.
-
+[b]Transmission bittorrent client under Slackware userspace[/b][br/]
+[Transmission project page](www.transmissionbt.com)[br/]
+Transmission is a BitTorrent client which features a simple interface on top of a cross-platform back-end. Transmission is free software licensed under the terms of the GNU General Public License (GPL), with parts under the MIT License.[br/]
+[b]Directions:[/b][br/]
+[b]Data Volumes:[/b][br/]
+ * /srv/config : in this path Transmission will store it's configuration files.[br/]
+ * /srv/downloads : in this path Transmission will store the downloaded files.[br/]
+ * /srv/watchdir : in this path Transmission will wach for new torrents to download.[br/][br/]
+[b]Network Ports:[/b][br/]
+ * 9091 : Transmission rpc interface.[br/]
+ * 51413 : Default BitTorrent communications port the Transmission uses.[br/]
 </Description>
 <Registry>https://registry.hub.docker.com/u/roninkenji/transmission-docker/</Registry>
 <GitHub>https://github.com/roninkenji/transmission-docker</GitHub>
