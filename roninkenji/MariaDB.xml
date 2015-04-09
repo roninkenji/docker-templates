@@ -47,7 +47,7 @@ http://wikipedia.org/wiki/MariaDB
 <Data>
 <Volume>
 <HostDir>/mnt/user/appdata/mariadb</HostDir>
-<ContainerDir>/var/lib/mysql<ContainerDir>
+<ContainerDir>/var/lib/mysql</ContainerDir>
 <Mode>rw</Mode>
 </Volume>
 </Data>
