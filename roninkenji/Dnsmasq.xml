@@ -22,7 +22,7 @@ Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router ad
 <Environment>
 </Environment>
 <Networking>
-<Mode>bridge</Mode>
+<Mode>host</Mode>
 <Publish>
 <Port>
 <HostPort>53</HostPort>
