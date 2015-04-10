@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+<Name>Dnsmasq</Name>
+<Description>
+[b]What is Dnsmasq?[/b][br/]
+Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router advertisement and network boot. It is designed to be lightweight and have a small footprint, suitable for resource constrained routers and firewalls. It has also been widely used for tethering on smartphones and portable hotspots, and to support virtual networking in virtualisation frameworks.[br/]
+[br/]
+[b]Container Volumes:[/b][br/]
+ * /etc/dnsmasq.d : configuration files storage volume[br/]
+ * /tftpboot : tftp files storage volume[br/]
+[br/]
+[b]Network Ports:[/b][br/]
+ * 53 : Default port for DNS[br/]
+ * 67 : Default port for BOOTPS[br/]
+ * 69 : Default port for TFTP[br/]
+</Description>
+<Registry>https://registry.hub.docker.com/roninkenji/dnsmasq-docker/</Registry>
+<GitHub>https://github.com/roninkenji/dnsmasq-docker</GitHub>
+<Repository>roninkenji/dnsmasq-docker</Repository>
+<BindTime>true</BindTime>
+<Privileged>true</Privileged>
+<Environment>
+</Environment>
+<Networking>
+<Mode>bridge</Mode>
+<Publish>
+<Port>
+<HostPort>53</HostPort>
+<ContainerPort>53</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>53</HostPort>
+<ContainerPort>53</ContainerPort>
+<Protocol>udp</Protocol>
+</Port>
+<Port>
+<HostPort>67</HostPort>
+<ContainerPort>67</ContainerPort>
+<Protocol>udp</Protocol>
+</Port>
+<Port>
+<HostPort>69</HostPort>
+<ContainerPort>69</ContainerPort>
+<Protocol>udp</Protocol>
+</Port>
+</Publish>
+</Networking>
+<Data>
+<Volume>
+<HostDir>/mnt/user/appdata/dnsmasq</HostDir>
+<ContainerDir>/etc/dnsmasq.d</ContainerDir>
+<Mode>ro</Mode>
+</Volume>
+<Volume>
+<HostDir></HostDir>
+<ContainerDir>/tftpboot</ContainerDir>
+<Mode>ro</Mode>
+</Volume>
+</Data>
+<WebUI/>
+<Banner/>
+<Icon>http://www.thekelleys.org.uk/dnsmasq/images/icon.png</Icon>
+</Container>
+
