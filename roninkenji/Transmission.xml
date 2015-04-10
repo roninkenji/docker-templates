@@ -103,7 +103,7 @@ Transmission is a BitTorrent client which features a simple interface on top of 
 <Mode>rw</Mode>
 </Volume>
 </Data>
-<!--<WebUI>http://[IP]:[PORT:9091]/</WebUI>-->
+<WebUI>http://[IP]:[PORT:9091]/</WebUI>
 <Banner>http://i.imgur.com/uFgAuT5.png</Banner>
 <Icon>http://i.imgur.com/tkCKanM.png</Icon>
 </Container>
