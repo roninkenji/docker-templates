@@ -18,7 +18,7 @@ Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router ad
 <GitHub>https://github.com/roninkenji/dnsmasq-docker</GitHub>
 <Repository>roninkenji/dnsmasq-docker</Repository>
 <BindTime>true</BindTime>
-<Privileged>true</Privileged>
+<Privileged>false</Privileged>
 <Environment>
 </Environment>
 <Networking>
