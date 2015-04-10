@@ -14,7 +14,7 @@ Dnsmasq provides network infrastructure for small networks: DNS, DHCP, router ad
  * 67 : Default port for BOOTPS[br/]
  * 69 : Default port for TFTP[br/]
 </Description>
-<Registry>https://registry.hub.docker.com/roninkenji/dnsmasq-docker/</Registry>
+<Registry>https://registry.hub.docker.com/u/roninkenji/dnsmasq-docker/</Registry>
 <GitHub>https://github.com/roninkenji/dnsmasq-docker</GitHub>
 <Repository>roninkenji/dnsmasq-docker</Repository>
 <BindTime>true</BindTime>
