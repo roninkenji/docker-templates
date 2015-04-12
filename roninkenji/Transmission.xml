@@ -30,11 +30,6 @@ Transmission is a BitTorrent client which features a simple interface on top of 
 <Protocol>tcp</Protocol>
 </Port>
 <Port>
-<HostPort>64005</HostPort>
-<ContainerPort>64005</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-<Port>
 <HostPort>64000</HostPort>
 <ContainerPort>64000</ContainerPort>
 <Protocol>tcp</Protocol>
@@ -57,6 +52,11 @@ Transmission is a BitTorrent client which features a simple interface on top of 
 <Port>
 <HostPort>64004</HostPort>
 <ContainerPort>64004</ContainerPort>
+<Protocol>tcp</Protocol>
+</Port>
+<Port>
+<HostPort>64005</HostPort>
+<ContainerPort>64005</ContainerPort>
 <Protocol>tcp</Protocol>
 </Port>
 <Port>
