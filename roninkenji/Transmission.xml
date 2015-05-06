@@ -20,7 +20,12 @@ Transmission is a BitTorrent client which features a simple interface on top of 
 <Repository>roninkenji/transmission-docker</Repository>
 <BindTime>true</BindTime>
 <Privileged>false</Privileged>
-<Environment/>
+<Environment>
+<Variable>
+<Name>EXTRAOPTS</Name>
+<Value/>
+</Variable>
+</Environment>
 <Networking>
 <Mode>bridge</Mode>
 <Publish>
