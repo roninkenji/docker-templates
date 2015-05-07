@@ -14,19 +14,15 @@ http://wikipedia.org/wiki/MariaDB[br/][br/]
  * 3306 : Default port for MariaDB[br/]
 [/br]
 [b]Environment Variables:[/b][br/]
- * MYSQL_ROOT_PASSWORD : Defines the initial value of root account password[br/]
+ * MYSQL_ROOT_PASSWORD : Defines the root account password[br/]
+ * MYSQL_SET_ROOT_PASSWORD : Defines the setting of root account password[br/]
 </Description>
 <Registry>https://registry.hub.docker.com/roninkenji/mariadb-doker</Registry>
 <GitHub>https://github.com/docker-library/mariadb</GitHub>
 <Repository>roninkenji/mariadb-docker</Repository>
 <BindTime>true</BindTime>
 <Privileged>false</Privileged>
-<Environment>
-<Variable>
-<Name>MYSQL_ROOT_PASSWORD</Name>
-<Value/>
-</Variable>
-</Environment>
+<Environment/>
 <Networking>
 <Mode>bridge</Mode>
 <Publish>
