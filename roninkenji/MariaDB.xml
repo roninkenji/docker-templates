@@ -7,13 +7,16 @@ MariaDB is a community-developed fork of the MySQL relational database managemen
 The intent is also to maintain high compatibility with MySQL, ensuring a “drop-in” replacement capability with library binary equivalency and exact matching with MySQL APIs and commands. It includes the XtraDB storage engine for replacing InnoDB, as well as a new storage engine, Aria, that intends to be both a transactional and non-transactional engine perhaps even included in future versions of MySQL.[br/]
 http://wikipedia.org/wiki/MariaDB[br/][br/]
 [b]Container Volumes:[/b][br/]
- * /var/lib/mysql : Database storage volume[br/][br/]
+ * /srv/config : Database configuration directory[br/][br/]
+ * /srv/data : Database storage directory[br/][br/]
 [b]Network Ports:[/b][br/]
  * 3306 : Default port for MariaDB
+[b]Environment Variables:[/b][br/]
+ * MYSQL_ROOT_PASSWORD : Defines the initial value of root account password
 </Description>
-<Registry>https://registry.hub.docker.com/_/mariadb</Registry>
+<Registry>https://registry.hub.docker.com/roninkenji/mariadb-doker</Registry>
 <GitHub>https://github.com/docker-library/mariadb</GitHub>
-<Repository>mariadb</Repository>
+<Repository>roninkenji/mariadb-docker</Repository>
 <BindTime>true</BindTime>
 <Privileged>false</Privileged>
 <Environment>
