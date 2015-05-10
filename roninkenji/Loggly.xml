@@ -13,11 +13,11 @@ Docker container for loggly (via rsyslog). Check out Loggly's [Docker logging do
 * TOKEN: Customer Token[br/]
 * TAG: Source tag [br/]
 </Description>
-<Registry>https://registry.hub.docker.com/u/sendgridlabs/loggly-docker/</Registry>
-<GitHub>https://github.com/sendgridlabs/loggly-docker</GitHub>
-<Repository>sendgridlabs/loggly-docker</Repository>
+<Registry>https://registry.hub.docker.com/u/roninkenji/loggly-docker/</Registry>
+<GitHub>https://github.com/roninkenji/loggly-docker</GitHub>
+<Repository>roninkenji/loggly-docker</Repository>
 <BindTime>true</BindTime>
-<Privileged>true</Privileged>
+<Privileged>roninkenji</Privileged>
 <Environment>
 <Variable>
 <Name>TOKEN</Name>
