@@ -41,6 +41,11 @@ source code.
 <Mode>rw</Mode>
 </Volume>
 <Volume>
+<HostDir>/mnt/user/appdata/httpd/logs</HostDir>
+<ContainerDir>/srv/logs</ContainerDir>
+<Mode>rw</Mode>
+</Volume>
+<Volume>
 <HostDir>/mnt/user/appdata/httpd/data</HostDir>
 <ContainerDir>/srv/data</ContainerDir>
 <Mode>rw</Mode>
