@@ -1,52 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Name>MariaDB</Name>
-<Description>
+	<Name>MariaDB</Name>
+	<Description>
 [b]What is MariaDB?[/b][br/]
 MariaDB is a community-developed fork of the MySQL relational database management system intended to remain free under the GNU GPL. Being a fork of a leading open source software system, it is notable for being led by the original developers of MySQL, who forked it due to concerns over its acquisition by Oracle. Contributors are required to share their copyright with the MariaDB Foundation.[br/]
 The intent is also to maintain high compatibility with MySQL, ensuring a “drop-in” replacement capability with library binary equivalency and exact matching with MySQL APIs and commands. It includes the XtraDB storage engine for replacing InnoDB, as well as a new storage engine, Aria, that intends to be both a transactional and non-transactional engine perhaps even included in future versions of MySQL.[br/]
 http://wikipedia.org/wiki/MariaDB[br/][br/]
 [b]Container Volumes:[/b][br/]
- * /srv/config : Database configuration directory[br/]
- * /srv/data : Database storage directory[br/]
+* /srv/config : Database configuration directory[br/]
+* /srv/data : Database storage directory[br/]
 [br/]
 [b]Network Ports:[/b][br/]
- * 3306 : Default port for MariaDB[br/]
+* 3306 : Default port for MariaDB[br/]
 [/br]
 [b]Environment Variables:[/b][br/]
- * MYSQL_ROOT_PASSWORD : Defines the root account password[br/]
- * MYSQL_SET_ROOT_PASSWORD : Defines the setting of root account password[br/]
-</Description>
-<Registry>https://registry.hub.docker.com/roninkenji/mariadb-doker</Registry>
-<GitHub>https://github.com/docker-library/mariadb</GitHub>
-<Repository>roninkenji/mariadb-docker</Repository>
-<BindTime>true</BindTime>
-<Privileged>false</Privileged>
-<Environment/>
-<Networking>
-<Mode>bridge</Mode>
-<Publish>
-<Port>
-<HostPort>3306</HostPort>
-<ContainerPort>3306</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-</Publish>
-</Networking>
-<Data>
-<Volume>
-<HostDir>/mnt/user/appdata/mariadb/config</HostDir>
-<ContainerDir>/srv/config</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-<Volume>
-<HostDir>/mnt/user/appdata/mariadb/data</HostDir>
-<ContainerDir>/srv/data</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-</Data>
-<WebUI/>
-<Banner/>
-<Icon>https://raw.githubusercontent.com/docker-library/docs/master/mariadb/logo.png</Icon>
+* MYSQL_ROOT_PASSWORD : Defines the root account password[br/]
+* MYSQL_SET_ROOT_PASSWORD : Defines the setting of root account password[br/]
+	</Description>
+	<Registry>https://registry.hub.docker.com/roninkenji/mariadb-doker</Registry>
+	<GitHub>https://github.com/docker-library/mariadb</GitHub>
+	<Repository>roninkenji/mariadb-docker</Repository>
+	<BindTime>false</BindTime>
+	<Privileged>false</Privileged>
+	<Environment/>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>3306</HostPort>
+				<ContainerPort>3306</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/mariadb/config</HostDir>
+			<ContainerDir>/srv/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/mariadb/data</HostDir>
+			<ContainerDir>/srv/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon>https://raw.githubusercontent.com/docker-library/docs/master/mariadb/logo.png</Icon>
 </Container>
 

@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Name>HTTPD</Name>
-<Description>
+	<Name>HTTPD</Name>
+	<Description>
 # httpd-docker
 
-The Apache HTTP Server is a powerful and flexible HTTP/1.1 compliant
-web server.  Originally designed as a replacement for the NCSA HTTP
-Server, it has grown to be the most popular web server on the
-Internet.  As a project of the Apache Software Foundation, the
-developers aim to collaboratively develop and maintain a robust,
-commercial-grade, standards-based server with freely available
-source code.
+The Apache HTTP Server is a powerful and flexible HTTP/1.1 compliant web server.  Originally designed as a replacement for the NCSA HTTP Server, it has grown to be the most popular web server on the Internet.  As a project of the Apache Software Foundation, the developers aim to collaboratively develop and maintain a robust, commercial-grade, standards-based server with freely available source code.
 
-</Description>
-<Registry>https://registry.hub.docker.com/u/roninkenji/httpd-docker/</Registry>
-<GitHub>https://github.com/roninkenji/httpd-docker</GitHub>
-<Repository>roninkenji/httpd-docker</Repository>
-<BindTime>true</BindTime>
-<Privileged>false</Privileged>
-<Environment/>
-<Networking>
-<Mode>bridge</Mode>
-<Publish>
-<Port>
-<HostPort>443</HostPort>
-<ContainerPort>443</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-<Port>
-<HostPort>8080</HostPort>
-<ContainerPort>80</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-</Publish>
-</Networking>
-<Data>
-<Volume>
-<HostDir>/mnt/user/appdata/httpd/config</HostDir>
-<ContainerDir>/srv/config</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-<Volume>
-<HostDir>/mnt/user/appdata/httpd/logs</HostDir>
-<ContainerDir>/srv/logs</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-<Volume>
-<HostDir>/mnt/user/appdata/httpd/data</HostDir>
-<ContainerDir>/srv/data</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-</Data>
-<Banner>http://httpd.apache.org/docs/2.4/images/feather.gif</Banner>
-<Icon>http://www.apache.org/favicons/apple-touch-icon-120x120.png</Icon>
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/httpd-docker/</Registry>
+	<GitHub>https://github.com/roninkenji/httpd-docker</GitHub>
+	<Repository>roninkenji/httpd-docker</Repository>
+	<BindTime>false</BindTime>
+	<Privileged>false</Privileged>
+	<Environment/>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>443</HostPort>
+				<ContainerPort>443</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>8080</HostPort>
+				<ContainerPort>80</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/httpd/config</HostDir>
+			<ContainerDir>/srv/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/httpd/logs</HostDir>
+			<ContainerDir>/srv/logs</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/httpd/data</HostDir>
+			<ContainerDir>/srv/data</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<Banner>http://httpd.apache.org/docs/2.4/images/feather.gif</Banner>
+	<Icon>http://www.apache.org/favicons/apple-touch-icon-120x120.png</Icon>
 </Container>

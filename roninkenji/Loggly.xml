@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Name>Loggly</Name>
-<Description>
-[b]loggly-docker[/b][br/]
-Docker container for loggly (via rsyslog). Check out Loggly's [Docker logging documentation](https://www.loggly.com/docs/docker-syslog/) to learn more.[br/]
-[br/]
-[b]Netowrk Ports[/b][br/]
-* 514: syslog over TCP[br/]
-* 514/udp: plain old syslog over udp[br/]
-[br/]
-[b]Environment Variables[/b][br/]
-* TOKEN: Customer Token[br/]
-* TAG: Source tag [br/]
-</Description>
-<Registry>https://registry.hub.docker.com/u/roninkenji/loggly-docker/</Registry>
-<GitHub>https://github.com/roninkenji/loggly-docker</GitHub>
-<Repository>roninkenji/loggly-docker</Repository>
-<BindTime>true</BindTime>
-<Privileged>roninkenji</Privileged>
-<Environment>
-<Variable>
-<Name>TOKEN</Name>
-<Value/>
-</Variable>
-<Variable>
-<Name>TAG</Name>
-<Value/>
-</Variable>
-</Environment>
-<Networking>
-<Mode>bridge</Mode>
-<Publish>
-<Port>
-<HostPort>514</HostPort>
-<ContainerPort>514</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-<Port>
-<HostPort>514</HostPort>
-<ContainerPort>514</ContainerPort>
-<Protocol>udp</Protocol>
-</Port>
-</Publish>
-</Networking>
-<Data>
-</Data>
-<WebUI/>
-<Banner/>
-<Icon>https://www.loggly.com/wp-content/themes/loggly/assets/images/favicon.ico</Icon>
+	<Name>Loggly</Name>
+	<Description>
+	[b]loggly-docker[/b][br/]
+	Docker container for loggly (via rsyslog). Check out Loggly's [Docker logging documentation](https://www.loggly.com/docs/docker-syslog/) to learn more.[br/]
+	[br/]
+	[b]Netowrk Ports[/b][br/]
+	* 514: syslog over TCP[br/]
+	* 514/udp: plain old syslog over udp[br/]
+	[br/]
+	[b]Environment Variables[/b][br/]
+	* TOKEN: Customer Token[br/]
+	* TAG: Source tag [br/]
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/loggly-docker/</Registry>
+	<GitHub>https://github.com/roninkenji/loggly-docker</GitHub>
+	<Repository>roninkenji/loggly-docker</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>roninkenji</Privileged>
+	<Environment>
+		<Variable>
+			<Name>TOKEN</Name>
+			<Value/>
+		</Variable>
+		<Variable>
+			<Name>TAG</Name>
+			<Value/>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>514</HostPort>
+				<ContainerPort>514</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>514</HostPort>
+				<ContainerPort>514</ContainerPort>
+				<Protocol>udp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon>https://www.loggly.com/wp-content/themes/loggly/assets/images/favicon.ico</Icon>
 </Container>
 

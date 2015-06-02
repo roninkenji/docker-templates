@@ -1,53 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Name>Calibre</Name>
-<Description>
+	<Name>Calibre</Name>
+	<Description>
 [b]What is Calibre?[/b][br/]
 [br/]
 [b]calibre[/b] is a free and open source e-book library management application developed by users of e-books for users of e-books. It has a cornucopia of features divided into the following main categories:[br/]
 [br/]
- *  Library Management[br/]
- *  E-book conversion[br/]
- *  Syncing to e-book reader devices[br/]
- *  Downloading news from the web and converting it into e-book form[br/]
- *  Comprehensive e-book viewer[br/]
- *  Content server for online access to your book collection[br/]
- *  E-book editor for the major e-book formats[br/]
+*  Library Management[br/]
+*  E-book conversion[br/]
+*  Syncing to e-book reader devices[br/]
+*  Downloading news from the web and converting it into e-book form[br/]
+*  Comprehensive e-book viewer[br/]
+*  Content server for online access to your book collection[br/]
+*  E-book editor for the major e-book formats[br/]
 [br/]
 (http://calibre-ebook.com)[br/]
 [br/]
 [b]Container Volumes:[/b][br/]
 [br/]
- * /opt/Library : Calibre library storage volume[br/]
+* /opt/Library : Calibre library storage volume[br/]
 [br/]
 [b]Network Ports:[/b][br/]
 [br/]
- * 8080 : Default port for Calibre server[br/]
-</Description>
-<Registry>https://registry.hub.docker.com/u/roninkenji/calibre-docker/</Registry>
-<GitHub>https://github.com/roninkenji/calibre-docker</GitHub>
-<Repository>roninkenji/calibre-docker</Repository>
-<BindTime>true</BindTime>
-<Privileged>false</Privileged>
-<Environment/>
-<Networking>
-<Mode>bridge</Mode>
-<Publish>
-<Port>
-<HostPort>8080</HostPort>
-<ContainerPort>8080</ContainerPort>
-<Protocol>tcp</Protocol>
-</Port>
-</Publish>
-</Networking>
-<Data>
-<Volume>
-<HostDir></HostDir>
-<ContainerDir>/opt/Library</ContainerDir>
-<Mode>rw</Mode>
-</Volume>
-</Data>
-<WebUI/>
-<Banner/>
-<Icon>http://calibre-ebook.com/favicon.ico</Icon>
+* 8080 : Default port for Calibre server[br/]
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/calibre-docker/</Registry>
+	<GitHub>https://github.com/roninkenji/calibre-docker</GitHub>
+	<Repository>roninkenji/calibre-docker</Repository>
+	<BindTime>false</BindTime>
+	<Privileged>false</Privileged>
+	<Environment/>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8080</HostPort>
+				<ContainerPort>8080</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir></HostDir>
+			<ContainerDir>/opt/Library</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon>http://calibre-ebook.com/favicon.ico</Icon>
 </Container>
