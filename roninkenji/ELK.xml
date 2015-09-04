@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>ELK Stack</Name>
+	<Description>
+	[b]docker-elk[/b][br/]
+	Docker container for ElasticSearch-Logstash-Kibana (ELK)[br/]
+	[br/]
+	[b]Netowrk Ports[/b][br/]
+	* 8080: Kibana[br/]
+        * 
+	[br/]
+	[b]Data Volumes[/b][br/]
+	* /etc/logstash: logstash config
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/docker-elk/</Registry>
+	<GitHub>https://github.com/roninkenji/docker-elk</GitHub>
+	<Repository>roninkenji/docker-elk</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>8080</HostPort>
+				<ContainerPort>8080</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon></Icon>
+</Container>
+
