@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>ELK</Name>
+	<Description>
+		[b]docker-elk[/b][br/]
+		Docker container for ElasticSearch-Logstash-Kibana (ELK)[br/]
+		[br/]
+		[b]Netowrk Ports[/b][br/]
+		* 80: Kibana[br/]
+		* 
+		[br/]
+		[b]Data Volumes[/b][br/]
+		* /etc/logstash: logstash config
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/docker-elk/</Registry>
+	<GitHub>https://github.com/roninkenji/docker-elk</GitHub>
+	<Repository>roninkenji/docker-elk</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>9000</HostPort>
+				<ContainerPort>80</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>514</HostPort>
+				<ContainerPort>514</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>514</HostPort>
+				<ContainerPort>514</ContainerPort>
+				<Protocol>udp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<ContainerDir>/etc/logstash</ContainerDir>
+			<HostDir>/mnt/user/appdata/ELK/config</HostDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<ContainerDir>/data</ContainerDir>
+			<HostDir>/mnt/user/appdata/ELK/data</HostDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<WebUI>http://[IP]:[PORT:9000]/</WebUI>
+	<Banner/>
+	<Icon>https://www.elastic.co/android-icon-192x192.png?change=123</Icon>
+</Container>
+
