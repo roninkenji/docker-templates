@@ -41,13 +41,13 @@
 	</Networking>
 	<Data>
 		<Volume>
-			<HostDir>/etc/logstash</HostDir>
-			<ContainerDir>/mnt/user/appdata/ELK/config</ContainerDir>
+			<ContainerDir>/etc/logstash</ContainerDir>
+			<HostDir>/mnt/user/appdata/ELK/config</HostDir>
 			<Mode>ro</Mode>
 		</Volume>
 		<Volume>
-			<HostDir>/data</HostDir>
-			<ContainerDir>/mnt/user/appdata/ELK/data</ContainerDir>
+			<ContainerDir>/data</ContainerDir>
+			<HostDir>/mnt/user/appdata/ELK/data</HostDir>
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
