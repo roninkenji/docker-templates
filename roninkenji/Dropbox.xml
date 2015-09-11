@@ -11,6 +11,7 @@
 [br/]
 [b]Network Ports:[/b][br/]
 * 17500 : Dropbox LAN sync[br/]
+* 17500/udp : Dropbox LAN sync[br/]
 [br/]
 [b]Environment Vriables:[/b][br/]
 * DROPBOX_USER: Dropbox user (default: nobody)[br/]
@@ -33,6 +34,13 @@
 				<Protocol>tcp</Protocol>
 			</Port>
 		</Publish>
+		<Publish>
+			<Port>
+				<HostPort>17500</HostPort>
+				<ContainerPort>17500</ContainerPort>
+				<Protocol>udp</Protocol>
+			</Port>
+		</Publish>
 	</Networking>
 	<Data>
 		<Volume>
@@ -41,12 +49,12 @@
 			<Mode>ro</Mode>
 		</Volume>
 		<Volume>
-			<HostDir>/mnt/user/appdata/dropbox/config</HostDir>
+			<HostDir>/mnt/cache/appdata/dropbox/config</HostDir>
 			<ContainerDir>/dropbox/.dropbox</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
 		<Volume>
-			<HostDir>/mnt/user/appdata/dropbox/app</HostDir>
+			<HostDir>/mnt/cache/appdata/dropbox/app</HostDir>
 			<ContainerDir>/dropbox/.dropbox-dist</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
