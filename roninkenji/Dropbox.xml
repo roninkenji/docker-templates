@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>Dropbox</Name>
+	<Description>
+[b]What is Dropbox?[/b][br/]
+[br/]
+[b]Container Volumes:[/b][br/]
+* /dropbox/Dropbox : Dropbox user files[br/]
+* /dropbox/.dropbox : Dropbox user config[br/]
+* /dropbox/.dropbox-dist : Dropbox user application[br/]
+[br/]
+[b]Network Ports:[/b][br/]
+* 17500 : Dropbox LAN sync[br/]
+[br/]
+[b]Environment Vriables:[/b][br/]
+* DROPBOX_USER: Dropbox user (default: nobody)
+* DROPBOX_USERID: Dropbox user id (default: 99)
+* DROPBOX_GROUP: Dropbox user group (default: users)
+* DROPBOX_GROUPID: Dropbox user group id (default: 100)
+[br/]
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/dropbox-docker/</Registry>
+	<GitHub>https://github.com/roninkenji/dropbox-docker</GitHub>
+	<Repository>roninkenji/dropbox-docker</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>17500</HostPort>
+				<ContainerPort>17500</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/dropbox/config</HostDir>
+			<ContainerDir>/dropbox/.dropbox</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/dropbox/app</HostDir>
+			<ContainerDir>/dropbox/.dropbox-dist</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/dropbox/data</HostDir>
+			<ContainerDir>/dropbox/Dropbox</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon>https://cf.dropboxstatic.com/static/images/icons/blue_dropbox_glyph-vflJ8-C5d.png</Icon>
+</Container>
+
