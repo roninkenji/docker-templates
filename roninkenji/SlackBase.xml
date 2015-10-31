@@ -4,7 +4,7 @@
 	<Description>
 [b]Slackware management userspace for unRAID[/b]
 	</Description>
-	<Registry>https://registry.hub.docker.com/roninkenji/slackware-base</Registry>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/slackware-base</Registry>
 	<GitHub>https://github.com/ronin-kenji/slackware-base</GitHub>
 	<Repository>roninkenji/slackware-base</Repository>
 	<BindTime>true</BindTime>
