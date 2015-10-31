@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>Developer</Name>
+	<Description>
+[b]Slackware management userspace for unRAID[/b]
+	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/unraid-dev-docker</Registry>
+	<GitHub>https://github.com/ronin-kenji/unraid-dev-docker</GitHub>
+	<Repository>roninkenji/unraid-dev-docker</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Environment/>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/Developer</HostDir>
+			<ContainerDir>/home/devuser</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon/>
+</Container>
+

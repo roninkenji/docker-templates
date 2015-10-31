@@ -17,7 +17,7 @@ http://wikipedia.org/wiki/MariaDB[br/][br/]
 * MYSQL_ROOT_PASSWORD : Defines the root account password[br/]
 * MYSQL_SET_ROOT_PASSWORD : Defines the setting of root account password[br/]
 	</Description>
-	<Registry>https://registry.hub.docker.com/roninkenji/mariadb-doker</Registry>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/mariadb-doker</Registry>
 	<GitHub>https://github.com/docker-library/mariadb</GitHub>
 	<Repository>roninkenji/mariadb-docker</Repository>
 	<BindTime>false</BindTime>
