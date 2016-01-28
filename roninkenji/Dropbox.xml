@@ -5,15 +5,15 @@
 [b]What is Dropbox?[/b][br/]
 [br/]
 [b]Container Volumes:[/b][br/]
-* /dropbox/Dropbox : Dropbox user files[br/]
-* /dropbox/.dropbox : Dropbox user config[br/]
-* /dropbox/.dropbox-dist : Dropbox user application[br/]
+* /dropbox/Dropbox : Dropbox user files. This is your sync'd folder[br/]
+* /dropbox/.dropbox-dist : Dropbox user application. This contains the app so that if it auto-updates, restart of the docker won't break it.[br/]
+* /dropbox/.dropbox : Dropbox user configi files. Take care as this controls the linkage to your account[br/]
 [br/]
 [b]Network Ports:[/b][br/]
 * 17500 : Dropbox LAN sync[br/]
 * 17500/udp : Dropbox LAN sync[br/]
 [br/]
-[b]Environment Vriables:[/b][br/]
+[b]Environment Variables:[/b][br/]
 * DROPBOX_USER: Dropbox user (default: nobody)[br/]
 * DROPBOX_USERID: Dropbox user id (default: 99)[br/]
 * DROPBOX_GROUP: Dropbox user group (default: users)[br/]
@@ -59,7 +59,7 @@
 			<Mode>rw</Mode>
 		</Volume>
 		<Volume>
-			<HostDir>/mnt/user/appdata/dropbox/data</HostDir>
+			<HostDir>/mnt/cache/appdata/dropbox/data</HostDir>
 			<ContainerDir>/dropbox/Dropbox</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>

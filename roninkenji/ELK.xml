@@ -7,7 +7,7 @@
 		[br/]
 		[b]Netowrk Ports[/b][br/]
 		* 80: Kibana[br/]
-		* 
+		* 514: Syslog[br/]
 		[br/]
 		[b]Data Volumes[/b][br/]
 		* /etc/logstash: logstash config
@@ -51,7 +51,7 @@
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
-	<WebUI>http://[IP]:[PORT:9000]/</WebUI>
+	<WebUI>http://[IP]:[PORT:80]/</WebUI>
 	<Banner/>
 	<Icon>https://www.elastic.co/android-icon-192x192.png?change=123</Icon>
 </Container>
