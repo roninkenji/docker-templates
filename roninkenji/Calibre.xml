@@ -51,7 +51,7 @@
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
-	<WebUI>http://[IP]:[PORT:8000]/Library<WebUI>
+	<WebUI>http://[IP]:[PORT:8000]/Library</WebUI>
 	<Banner/>
 	<Icon>http://calibre-ebook.com/favicon.ico</Icon>
 </Container>
