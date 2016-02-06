@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>MRTG</Name>
+	<Description>
+	</Description>
+	<Registry>https://hub.docker.com/r/roninkenji/mrtg-docker/</Registry>
+	<GitHub>https://github.com/roninkenji/mrtg-docker</GitHub>
+	<Repository>roninkenji/mrtg-docker</Repository>
+	<BindTime>true</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/cache/appdata/mrtg/config</HostDir>
+			<ContainerDir>/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/cache/appdata/mrtg/data</HostDir>
+			<ContainerDir>/logdir</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/cache/appdata/mrtg/data</HostDir>
+			<ContainerDir>/webdir</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon>view-source:http://oss.oetiker.ch/mrtg/inc/favicon.ico</Icon>
+</Container>
+
