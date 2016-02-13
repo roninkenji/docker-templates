@@ -3,6 +3,17 @@
 	<Name>MRTG</Name>
 	<Description>
 	</Description>
+	<Overview/>
+        <Support/>
+	<Project/>
+	<Changes/>
+[b]Change Log[/b]
+[b]2016-02-13[/b]
+- Initial release
+	</Changes>
+	<Beta>True</Beta>
+	<Category/>
+	<Date>2016-02-13</Date>
 	<Registry>https://hub.docker.com/r/roninkenji/mrtg-docker/</Registry>
 	<GitHub>https://github.com/roninkenji/mrtg-docker</GitHub>
 	<Repository>roninkenji/mrtg-docker</Repository>
@@ -10,6 +21,7 @@
 	<Privileged>false</Privileged>
 	<Networking>
 		<Mode>bridge</Mode>
+		<Publish/>
 	</Networking>
 	<Data>
 		<Volume>
@@ -24,17 +36,12 @@
 		</Volume>
 		<Volume>
 			<HostDir>/mnt/cache/appdata/mrtg/data</HostDir>
-			<ContainerDir>/logdir</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-		<Volume>
-			<HostDir>/mnt/cache/appdata/mrtg/data</HostDir>
-			<ContainerDir>/webdir</ContainerDir>
+			<ContainerDir>/mrtg</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
 	<WebUI/>
 	<Banner/>
-	<Icon>view-source:http://oss.oetiker.ch/mrtg/inc/favicon.ico</Icon>
+	<Icon>http://oss.oetiker.ch/mrtg/inc/favicon.ico</Icon>
 </Container>
 
