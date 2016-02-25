@@ -6,7 +6,7 @@
 	<Overview/>
         <Support/>
 	<Project/>
-	<Changes/>
+	<Changes>
 [b]Change Log[/b]
 [b]2016-02-13[/b]
 - Initial release
@@ -37,6 +37,11 @@
 		<Volume>
 			<HostDir>/mnt/cache/appdata/mrtg/data</HostDir>
 			<ContainerDir>/mrtg</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/cache/appdata/mrtg/logs</HostDir>
+			<ContainerDir>/logs</ContainerDir>
 			<Mode>rw</Mode>
 		</Volume>
 	</Data>
