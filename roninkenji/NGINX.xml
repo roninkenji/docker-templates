@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>NGINX</Name>
+	<Description>
+NGINX server under Alpine Linux userspace
+
+[NGINX Project Page](www.nginx.com)
+		
+## What is NGINX?
+NGINX is a free, open-source, high-performance HTTP server and reverse proxy, as well as an IMAP/POP3 proxy server. NGINX is known for its high performance, stability, rich feature set, simple configuration, and low resource consumption.
+
+NGINX is one of a handful of servers written to address the C10K problem. Unlike traditional servers, NGINX doesn't rely on threads to handle requests. Instead it uses a much more scalable event-driven (asynchronous) architecture. This architecture uses small, but more importantly, predictable amounts of memory under load. Even if you don't expect to handle thousands of simultaneous requests, you can still benefit from NGINX's high-performance and small memory footprint. NGINX scales in all directions: from the smallest VPS all the way up to large clusters of servers.
+
+## Directions:
+
+### Data Volumes:
+ * /config : in this path NGINX will store it's configuration files.
+ * /var/log/nginx : in this path NGINX will store it's configuration files.
+  
+### Network Ports:
+ * 80 : Default webservice port
+ * 443 : (Initially disabled) SSL webservice port
+ 	</Description>
+	<Registry>https://registry.hub.docker.com/u/roninkenji/nginx-docker/</Registry>
+	<GitHub>https://github.com/roninkenji/nginx-docker</GitHub>
+	<Repository>roninkenji/nginx-docker</Repository>
+	<BindTime>false</BindTime>
+	<Privileged>false</Privileged>
+	<Environment>
+		<Variable>
+		</Variable>
+	</Environment>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>80</HostPort>
+				<ContainerPort>80</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+			<Port>
+				<HostPort>443</HostPort>
+				<ContainerPort>443</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume>
+			<HostDir>/etc/localtime</HostDir>
+			<ContainerDir>/etc/localtime</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/nginx/config</HostDir>
+			<ContainerDir>/config</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/nginx/logs</HostDir>
+			<ContainerDir>/var/logs/nginx</ContainerDir>
+			<Mode>rw</Mode>
+		</Volume>
+		<Volume>
+			<HostDir>/mnt/user/appdata/nginx/html</HostDir>
+			<ContainerDir>/var/www</ContainerDir>
+			<Mode>ro</Mode>
+		</Volume>
+	</Data>
+	<WebUI/>
+	<Banner>https://cdn.rawgit.com/roninkenji/docker-templates/bea91310909feea24ab7cc160706f518ce417f1f/images/banner_nginx.png</Banner>
+	<Icon>https://cdn.rawgit.com/roninkenji/docker-templates/dc65ed167eb58f71eedf381ebbb23896229e1e9b/images/nginx_n_icon_green.png</Icon>
+</Container>
+
