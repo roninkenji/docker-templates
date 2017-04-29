@@ -1,73 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Container>
-	<Name>Transmission</Name>
-	<Description>
-[b]Transmission bittorrent client under Slackware userspace[/b][br/]
-[Transmission project page](www.transmissionbt.com)[br/]
-Transmission is a BitTorrent client which features a simple interface on top of a cross-platform back-end. Transmission is free software licensed under the terms of the GNU General Public License (GPL), with parts under the MIT License.[br/]
-[b]Directions:[/b][br/]
-[b]Data Volumes:[/b][br/]
-* /srv/config : in this path Transmission will store it's configuration files.[br/]
-* /srv/downloads : in this path Transmission will store the downloaded files.[br/]
-* /srv/watchdir : in this path Transmission will wach for new torrents to download.[br/][br/]
-[b]Network Ports:[/b][br/]
-* 9091 : Transmission rpc interface.[br/]
-* 64005 : Default BitTorrent communications port the Transmission uses.[br/]
-[br/]
-[b]Environment Variables:[/b][br/]
-* EXTRAOPTS : Additional options passed to trnasmission-daemon[br/]
-[br/]
-	</Description>
-	<Registry>https://registry.hub.docker.com/u/roninkenji/transmission-docker/</Registry>
-	<GitHub>https://github.com/roninkenji/transmission-docker</GitHub>
-	<Repository>roninkenji/transmission-docker</Repository>
-	<BindTime>false</BindTime>
-	<Privileged>false</Privileged>
-	<Environment>
-		<Variable>
-			<Name>EXTRAOPTS</Name>
-			<Value/>
-		</Variable>
-	</Environment>
-	<Networking>
-		<Mode>bridge</Mode>
-		<Publish>
-			<Port>
-				<HostPort>9091</HostPort>
-				<ContainerPort>9091</ContainerPort>
-				<Protocol>tcp</Protocol>
-			</Port>
-			<Port>
-				<HostPort>64005</HostPort>
-				<ContainerPort>64005</ContainerPort>
-				<Protocol>tcp</Protocol>
-			</Port>
-		</Publish>
-	</Networking>
-	<Data>
-		<Volume>
-			<HostDir>/etc/localtime</HostDir>
-			<ContainerDir>/etc/localtime</ContainerDir>
-			<Mode>ro</Mode>
-		</Volume>
-		<Volume>
-			<HostDir>/mnt/user/appdata/Transmission</HostDir>
-			<ContainerDir>/srv/config</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-		<Volume>
-			<HostDir></HostDir>
-			<ContainerDir>/srv/downloads</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-		<Volume>
-			<HostDir>/mnt/user/appdata/Transmission/watchdir</HostDir>
-			<ContainerDir>/srv/watchdir</ContainerDir>
-			<Mode>rw</Mode>
-		</Volume>
-	</Data>
-	<WebUI>http://[IP]:[PORT:9091]/</WebUI>
-	<Banner>http://i.imgur.com/uFgAuT5.png</Banner>
-	<Icon>http://i.imgur.com/tkCKanM.png</Icon>
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Transmission</Name>
+  <Repository>roninkenji/transmission-docker</Repository>
+  <Registry>https://hub.docker.com/r/roninkenji/transmission-docker/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>[b]Transmission bittorrent client under Alpine Linux userspace[/b][br/]&#xD;
+[Transmission project page](www.transmissionbt.com)[br/]&#xD;
+Transmission is a BitTorrent client which features a simple interface on top of a cross-platform back-end. Transmission is free software licensed under the terms of the GNU General Public License (GPL), with parts under the MIT License.[br/]&#xD;
+[b]Directions:[/b][br/]&#xD;
+[b]Data Volumes:[/b][br/]&#xD;
+* /config : in this path Transmission will store it's configuration files.[br/]&#xD;
+* /downloads : in this path Transmission will store the downloaded files.[br/]&#xD;
+* /watchdir : in this path Transmission will wach for new torrents to download.[br/][br/]&#xD;
+[b]Network Ports:[/b][br/]&#xD;
+* 9091 : Transmission rpc interface.[br/]&#xD;
+* 64000 : Default BitTorrent communications port the Transmission uses.[br/]&#xD;
+[br/]&#xD;
+[b]Environment Variables: (optional)[/b][br/]&#xD;
+* EXTRAOPTS : Additional options passed to trnasmission-daemon[br/]&#xD;
+* TRANSMISSION_USER : user for running transmission process (default: user1)[br/]&#xD;
+* TRANSMISSION_USERID : userid of TRANSMISSION_USER (default: 99)[br/]&#xD;
+* TRANSMISSION_GROUP : group for running transmission process (default: users)[br/]&#xD;
+* TRANSMISSION_GROUPID : groupid of TRANSMISSION_GROUP (default: 100)[br/]</Overview>
+  <Category>Downloaders: Network:Other Status:Stable</Category>
+  <WebUI>http://[IP]:[PORT:9091]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://i.imgur.com/tkCKanM.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1493436826</DateInstalled>
+  <Description>[b]Transmission bittorrent client under Alpine Linux userspace[/b][br/]&#xD;
+[Transmission project page](www.transmissionbt.com)[br/]&#xD;
+Transmission is a BitTorrent client which features a simple interface on top of a cross-platform back-end. Transmission is free software licensed under the terms of the GNU General Public License (GPL), with parts under the MIT License.[br/]&#xD;
+[b]Directions:[/b][br/]&#xD;
+[b]Data Volumes:[/b][br/]&#xD;
+* /config : in this path Transmission will store it's configuration files.[br/]&#xD;
+* /downloads : in this path Transmission will store the downloaded files.[br/]&#xD;
+* /watchdir : in this path Transmission will wach for new torrents to download.[br/][br/]&#xD;
+[b]Network Ports:[/b][br/]&#xD;
+* 9091 : Transmission rpc interface.[br/]&#xD;
+* 64000 : Default BitTorrent communications port the Transmission uses.[br/]&#xD;
+[br/]&#xD;
+[b]Environment Variables: (optional)[/b][br/]&#xD;
+* EXTRAOPTS : Additional options passed to trnasmission-daemon[br/]&#xD;
+* TRANSMISSION_USER : user for running transmission process (default: user1)[br/]&#xD;
+* TRANSMISSION_USERID : userid of TRANSMISSION_USER (default: 99)[br/]&#xD;
+* TRANSMISSION_GROUP : group for running transmission process (default: users)[br/]&#xD;
+* TRANSMISSION_GROUPID : groupid of TRANSMISSION_GROUP (default: 100)[br/]</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>64000</HostPort>
+        <ContainerPort>64005</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9091</HostPort>
+        <ContainerPort>9091</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Transmission</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads</HostDir>
+      <ContainerDir>/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/Transmission/watchdir</HostDir>
+      <ContainerDir>/watchdir</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>EXTRAOPTS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Bittorrent Port" Target="64005" Default="64000" Mode="tcp" Description="Port used by Transmission to listen to bittorrent uploads" Type="Port" Display="always" Required="true" Mask="false">64000</Config>
+  <Config Name="Application data directory" Target="/config" Default="/mnt/user/appdata/Transmission" Mode="rw" Description="Directory mapping for storing application data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Transmission</Config>
+  <Config Name="Download directory" Target="/downloads" Default="/mnt/user/Downloads" Mode="rw" Description="Directory mapping forstoring all the downloads. Share or subdirectory of the Application data directory is OK." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads</Config>
+  <Config Name="Watch directory" Target="/watchdir" Default="/mnt/user/appdata/Transmission/watchdir" Mode="rw" Description="Transmission can watch for new torrentfiles to download from this directory mapping" Type="Path" Display="always-hide" Required="true" Mask="false">/mnt/user/appdata/Transmission/watchdir</Config>
+  <Config Name="Service Port" Target="9091" Default="9091" Mode="tcp" Description="Transmission RPC/WebUI port" Type="Port" Display="advanced-hide" Required="true" Mask="false">9091</Config>
+  <Config Name="Timezone file" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Timezone file" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
+  <Config Name="Extra Options" Target="EXTRAOPTS" Default="" Mode="" Description="Extra commandline options for transmission can be placed here" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
-
