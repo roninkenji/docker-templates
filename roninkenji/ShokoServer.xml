@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Container version="2">
+    <Name>ShokoServer</Name>
+    <Repository>roninkenji/shokoserver-docker:latest</Repository>
+    <Registry>https://registry.hub.docker.com/u/roninkenji/shokoserver-docker/</Registry>
+    <Network>none</Network>
+    <Privileged>false</Privileged>
+    <Support/>
+    <Overview>[b]Shoko Server Documentation[/b]&#xD;
+        &#xD;
+        [p]Shoko Server is the core component of the Shoko suite and with it's client-server architecture which allows any program or plugin to access Shoko. You'll have access to your entire collection locally and over the internet with no additional work outside the initial configuration required.&#xD;
+        &#xD;
+        [p]The idea behind Shoko Server is to automate the entire process from start to finish, all you need to do is specify the location of your files and Shoko Server does the rest. However, instead of having to duplicate this process, Shoko Server was designed to allow other programs and plugins to connect directly to it, retrieve the information it needs and display it as requested. Anyone with programming knowledge can take advantage of this and create their own program and plugin without having to worry about all the tedious things Shoko Server takes care of.&#xD;
+    </Overview>
+    <Category/>
+    <WebUI>http://[IP]:[PORT:8000]</WebUI>
+    <TemplateURL>roninkenji/shokoserver-docker</TemplateURL>
+    <Icon/>
+    <ExtraParams/>
+    <Description>[b]Shoko Server Documentation[/b]&#xD;
+        &#xD;
+        [p]Shoko Server is the core component of the Shoko suite and with it's client-server architecture which allows any program or plugin to access Shoko. You'll have access to your entire collection locally and over the internet with no additional work outside the initial configuration required.&#xD;
+        &#xD;
+        [p]The idea behind Shoko Server is to automate the entire process from start to finish, all you need to do is specify the location of your files and Shoko Server does the rest. However, instead of having to duplicate this process, Shoko Server was designed to allow other programs and plugins to connect directly to it, retrieve the information it needs and display it as requested. Anyone with programming knowledge can take advantage of this and create their own program and plugin without having to worry about all the tedious things Shoko Server takes care of.&#xD;
+    </Description>
+    <Networking>
+        <Mode>bridge</Mode>
+        <Publish>
+            <Port>
+                <HostPort>8111</HostPort>
+                <ContainerPort>8111</ContainerPort>
+                <Protocol>tcp</Protocol>
+            </Port>
+        </Publish>
+    </Networking>
+    <Data>
+        <Volume>
+            <HostDir>/etc/localtime</HostDir>
+            <ContainerDir>/etc/localtime</ContainerDir>
+            <Mode>ro</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/appdata/shoko</HostDir>
+            <ContainerDir>/shoko</ContainerDir>
+            <Mode>rw</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/appdata/shoko/webui</HostDir>
+            <ContainerDir>/opt/shoko/webui</ContainerDir>
+            <Mode>ro</Mode>
+        </Volume>
+        <Volume>
+            <HostDir>/mnt/user/Media/</HostDir>
+            <ContainerDir>/Media</ContainerDir>
+            <Mode>ro</Mode>
+        </Volume>
+    </Data>
+    <Environment/>
+    <Config Name="Timezone File" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
+    <Config Name="AppData Directory" Target="/shoko" Default="/mnt/cache/appdata/shoko" Mode="rw" Description="Container Path: /shoko" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/shoko</Config>
+    <Config Name="WebUI files" Target="/opt/shoko/webui" Default="/mnt/user/appdata/shoko/webui" Mode="ro" Description="WebUI files" Type="Path" Display="always-hide" Required="false" Mask="false">/mnt/user/appdata/shoko/webui</Config>
+    <Config Name="Media Files" Target="/Media" Default="/mnt/user/Media/" Mode="ro" Description="Mount for all your files" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/</Config>
+</Container>
+
