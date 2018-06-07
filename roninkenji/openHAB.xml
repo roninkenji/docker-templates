@@ -10,8 +10,8 @@
   <Overview>openHAB - a vendor and technology agnostic open source automation software for your home.</Overview>
   <Category>HomeAutomation:</Category>
   <WebUI>http://[IP]:8080/</WebUI>
-  <TemplateURL>roninkenji/openHAB</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/tinglis1/docker-containers/master/openhab/openhab-logo-square.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/roninkenji/docker-templates/master/roninkenji/openHAB.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/roninkenji/docker-templates/master/images/openhab-logo-square.png</Icon>
   <ExtraParams>--tty</ExtraParams>
   <PostArgs/>
   <DonateText/>
