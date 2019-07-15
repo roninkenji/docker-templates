@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>guacamole</Name>
+  <Repository>guacamole/guacamole:latest</Repository>
+  <Registry>https://hub.docker.com/r/guacamole/guacamole/</Registry>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://guacamole.apache.org</Project>
+  <Overview>[b]What is Apache Guacamole?[/b]&#xD;
+[br/]&#xD;
+Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP. We call it clientless because no plugins or client software are required.[br/]&#xD;
+[br/]&#xD;
+Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.[br/]&#xD;
+</Overview>
+  <Category>Cloud:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/guacamole</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/apache/guacamole-client/master/guacamole/src/main/webapp/images/guac-tricolor.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1563230562</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>[b]What is Apache Guacamole?[/b]&#xD;
+[br/]&#xD;
+Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC and RDP. We call it clientless because no plugins or client software are required.[br/]&#xD;
+[br/]&#xD;
+Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.[br/]&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+  <Config Name="Guacamole Home Template" Target="GUACAMOLE_HOME" Default="/config" Mode="" Description="Container Variable: GUACAMOLE_HOME" Type="Variable" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="Guacamole Home Template directory" Target="/config" Default="/mnt/user/appdata/guacamole" Mode="rw" Description="Guacamole Home directory template. Container Path: /config" Type="Path" Display="advanced-hide" Required="false" Mask="false"></Config>
+  <Config Name="guacd Hostname / IP address" Target="GUACD_HOSTNAME" Default="" Mode="" Description="Container Variable: GUACD_HOSTNAME" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="guacd Port" Target="GUACD_PORT" Default="4822" Mode="" Description="Container Variable: GUACD_PORT" Type="Variable" Display="advanced-hide" Required="true" Mask="false"></Config>
+  <Config Name="MySQL Hostname" Target="MYSQL_HOSTNAME" Default="" Mode="" Description="Container Variable: MYSQL_HOSTNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MySQL Database" Target="MYSQL_DATABASE" Default="" Mode="" Description="Container Variable: MYSQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MySQL User" Target="MYSQL_USER" Default="" Mode="" Description="Container Variable: MYSQL_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="MySQL Password" Target="MYSQL_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="PostgreSQL Hostname" Target="POSTGRESQL_HOSTNAME" Default="" Mode="" Description="Container Variable: POSTGRESQL_HOSTNAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PostgreSQL Database" Target="POSTGRESQL_DATABASE" Default="" Mode="" Description="Container Variable: POSTGRESQL_DATABASE" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PostgreSQL User" Target="POSTGRESQL_USER" Default="" Mode="" Description="Container Variable: POSTGRESQL_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PostgreSQL Password" Target="POSTGRESQL_PASSWORD" Default="" Mode="" Description="Container Variable: POSTGRESQL_PASSWORD" Type="Variable" Display="always" Required="false" Mask="true"></Config>
+  <Config Name="Tomcat server.xml" Target="/usr/local/tomcat/conf/server.xml" Default="" Mode="rw" Description="Container Path: /usr/local/tomcat/conf/server.xml" Type="Path" Display="advanced-hide" Required="false" Mask="false"></Config>
+</Container>

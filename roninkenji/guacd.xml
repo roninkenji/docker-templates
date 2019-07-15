@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+	<Name>guacd</Name>
+	<Description>
+[b]What is guacd?[/b][br/]
+[br/]
+[b]Container Volumes:[/b][br/]
+* None : guacd is stateless
+[br/]
+[b]Network Ports:[/b][br/]
+* 4822 : guacd port[br/]
+[br/]
+[b]Environment Variables:[/b][br/]
+* None[br/]
+[br/]
+	</Description>
+	<Overview></Overview>
+        <Support></Support>
+	<Project></Project>
+	<Changes>
+[b]Change Log[/b]
+[b]2019-07-15[/b]
+- Initial release
+	</Changes>
+	<Beta>False</Beta>
+	<Category>Cloud:</Category>
+	<Date>2019-07-15</Date>
+	<Registry></Registry>
+	<GitHub></GitHub>
+	<Repository>guacamole/guacd</Repository>
+	<BindTime>false</BindTime>
+	<Privileged>false</Privileged>
+	<Networking>
+		<Mode>bridge</Mode>
+		<Publish>
+			<Port>
+				<HostPort>4822</HostPort>
+				<ContainerPort>4822</ContainerPort>
+				<Protocol>tcp</Protocol>
+			</Port>
+		</Publish>
+	</Networking>
+	<Data>
+		<Volume/>
+	</Data>
+	<WebUI/>
+	<Banner/>
+	<Icon/>
+</Container>
